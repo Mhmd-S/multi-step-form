@@ -1,0 +1,10 @@
+.Form-container{
+    width: 65%;
+    height: 85%;
+    border-radius: 12.5px;
+    box-shadow: 0px 3px 5px 5px rgba(221, 221, 221, 0.246);
+    background-color: white;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 30% 70%;
+}

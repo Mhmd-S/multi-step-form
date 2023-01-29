@@ -1,0 +1,75 @@
+.Tracker-container{
+    position: relative;
+    width:100%;
+    height: 100%;
+    padding: 3rem 0 0 2rem;
+    background-color: #483eff;
+    border-radius: 12.5px;
+    overflow: hidden;
+}
+
+.Tracker-container::after {
+    content: "";
+    position: absolute;
+    background-color: #ffaf7e;
+    width: 60%;
+    height: 85%;
+    transform: rotate(65deg);
+    top:55%;
+    left: 30%;
+}
+
+.Tracker-container::before {
+    content: "";
+    position: absolute;
+    background-color: #f9818d;
+    width: 60%;
+    height: 80%;
+    transform: rotate(100deg);
+    top:50%;
+    left: 30%;
+}
+
+.Tracker-subContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "sn st"
+                        "sn n";
+    padding-bottom: 1rem;
+}
+
+.Tracker-subContainer-stepNumber{
+    width: 2rem;
+    height: 2rem;
+    color: #d0cff9;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 100%;
+    border: 1px solid #d0cff9;
+    grid-area: sn;
+}
+
+.stepNumber-active{
+    background-color: #bde2fd;
+    color: #183a5e;
+}
+
+.Tracker-subContainer-step{
+    color:#9795f7;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    grid-area: st;
+}
+
+.Tracker-subContainer-stepName{
+    color:#f6f6fe;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    grid-area: n;
+}
