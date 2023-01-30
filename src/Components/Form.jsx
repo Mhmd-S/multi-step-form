@@ -7,12 +7,12 @@ import FormPlans from "./FormPlans.jsx"
 
 const Form = () => {
 
-  const [payTime, setpayTime] = useState("m");
+  const [payTime, setPayTime] = useState(false);
 
   return (
     <div className="Form-container">
         <Tracker />
-        <FormPlans payTime={payTime} setPayTime={setpayTime}/>
+        <FormPlans payTime={payTime} setPayTime={setPayTime}/>
     </div>
   )
 }

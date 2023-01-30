@@ -1,0 +1,156 @@
+.FormPlans-container{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.FormPlans-header{
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.FormPlans-header h1 {
+    font-size: 1.75rem;
+    padding-bottom: 0.5rem;
+    color: #183a5e;
+}
+
+.FormPlans-header h5 {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #a4a5a8;
+}
+
+.FormPlans-plans{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.FormPlans-plans-planContainer{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0 1rem;
+    border: 1px solid #c6c4c7;
+    border-radius: 7.5px;
+}
+
+.FormPlans-plans-planContainer-active{
+    border: 1px solid #8765d3;
+    background-color: #f8f9fe;
+}
+
+.FormPlans-plans-planContainer img{
+    width: 35%;
+    padding: .4rem;
+    border-radius: 100%;
+}
+
+#img-arcade{
+    background-color: #fbac7b;
+}
+
+#img-adv{
+    background-color: #f68690;
+}
+
+#img-pro{
+    background-color: #4640fc;
+}
+
+
+.FormPlans-plans-planContainer h5 {
+    margin-top: 3rem;
+}
+
+.FormPlans-toggle-container{
+    width: 100%;
+    background-color: #f8f9fe;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 17px;
+    cursor: pointer;
+    margin:0 1rem;
+    
+}
+
+.slider::after {
+    content: "";
+    position: absolute;
+    height: 75%;
+    width: 40%;
+    border-radius: 100%;
+    background-color: white;
+    top:2px;
+    left:2px;
+    transition: 0.3s ease-in-out;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4640fc;
+    border-radius: 17px;
+}
+
+.active-slider::after{
+    transform:translate(100%,0);    
+}
+
+.FormPlans-toggle-container span{
+    font-weight: 700;
+    font-size: 0.75rem;
+    color:#9a9aa4;
+}
+
+
+.active-span{
+    color:#183a5e !important;
+}
+
+.FormPlans-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3.2rem;
+}
+
+.FormPlans-button{
+    padding:1rem 1.5rem;
+    border-radius: 7.5px;
+    cursor: pointer;
+}
+
+.back {
+    color: #9797a1;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.back:hover{
+    color:;
+}
+
+.next{
+    background-color: #022959;
+    color: #ddeef8;
+}
