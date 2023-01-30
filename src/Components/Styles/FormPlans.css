@@ -70,7 +70,7 @@
 
 
 .FormPlans-plans-planContainer h5 {
-    margin-top: 3rem;
+    margin-top: 2.45rem;
     font-size: 0.8rem;
     font-weight: 800;
     color:#042859
@@ -78,8 +78,14 @@
 
 .FormPlans-plans-planContainer h6 {
     margin-top: 0.3rem;
+    font-size: 0.75rem;
     font-weight: 400;
     color:#9797a1;
+}
+
+.FormPlans-plans-planContainer span {
+    font-size: 0.55rem;
+    font-weight: 500;
 }
 
 .FormPlans-toggle-container{

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Styles/FormPlans.css'
 
-const FormPlans = ({payTime, setPayTime}) => {
+const FormPlans = ({payTime, setPayTime, planType, setPlanType}) => {
   return (
     <div className="FormPlans-container">
         <div className='FormPlans-header'>
@@ -10,22 +10,25 @@ const FormPlans = ({payTime, setPayTime}) => {
         </div>
 
         <div className="FormPlans-plans">
-            <div className="FormPlans-plans-planContainer">
+            <div onClick={()=>{setPlanType(1)}} className={planType == 1 ? "FormPlans-plans-planContainer FormPlans-plans-planContainer-active": "FormPlans-plans-planContainer"}>
                 <img id="img-arcade" src="./Misc/joystick.svg" alt="arcade"/>
                 <h5>Arcade</h5>
-                <h6>$9/mo</h6>
+                <h6>{payTime ? "$90/yr":"$9/mo"}</h6>
+                {payTime ? <span>2 months free</span> : ""}
             </div>
 
-            <div className="FormPlans-plans-planContainer">
+            <div onClick={()=>{setPlanType(2)}} className={planType == 2 ? "FormPlans-plans-planContainer FormPlans-plans-planContainer-active": "FormPlans-plans-planContainer"}>
                 <img id="img-adv" src="./Misc/controller.svg" alt="advanced"/>
                 <h5>Advanced</h5>
-                <h6>$12/mo</h6>
+                <h6>{payTime ? "$120/yr":"$12/mo"}</h6>
+                {payTime ? <span>2 months free</span> : ""}
             </div>
 
-            <div className="FormPlans-plans-planContainer">
+            <div onClick={()=>{setPlanType(3)}} className={planType == 3 ? "FormPlans-plans-planContainer FormPlans-plans-planContainer-active": "FormPlans-plans-planContainer"}>
                 <img id="img-pro" src="./Misc/bullseye.svg" alt="pro"/>
                 <h5>Pro</h5>
-                <h6>$15/mo</h6>
+                <h6>{payTime ? "$150/yr":"$15/mo"}</h6>
+                {payTime ? <span>2 months free</span> : ""}
             </div>
         </div>
         
