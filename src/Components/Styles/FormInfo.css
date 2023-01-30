@@ -51,3 +51,8 @@
     color: #ddeef8;
     border-radius: 7.5px;
 }
+
+.FormInfo-button:hover{
+    background-color: #184a88;
+    border:1px solid #abc2d0;
+}

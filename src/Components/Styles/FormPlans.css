@@ -40,6 +40,11 @@
     border-radius: 7.5px;
 }
 
+.FormPlans-plans-planContainer:hover{
+    border: 1px solid #8765d3;
+    cursor: pointer; 
+}
+
 .FormPlans-plans-planContainer-active{
     border: 1px solid #8765d3;
     background-color: #f8f9fe;
@@ -66,6 +71,15 @@
 
 .FormPlans-plans-planContainer h5 {
     margin-top: 3rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color:#042859
+}
+
+.FormPlans-plans-planContainer h6 {
+    margin-top: 0.3rem;
+    font-weight: 400;
+    color:#9797a1;
 }
 
 .FormPlans-toggle-container{
@@ -144,13 +158,20 @@
     color: #9797a1;
     border: 1px solid transparent;
     background-color: transparent;
+    font-weight: 600;
 }
 
 .back:hover{
-    color:;
+    color:#042859;
 }
 
 .next{
+    border:1px solid #022959;
     background-color: #022959;
     color: #ddeef8;
+}
+
+.next:hover{
+    background-color: #184a88;
+    border: 1px solid #abc2d0;
 }
