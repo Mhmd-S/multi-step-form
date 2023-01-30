@@ -1,9 +1,14 @@
 import React from 'react'
 import "./Styles/FormInfo.css"
+import { useForm } from "react-hook-form"
 
-const FormInfo = () => {
+const FormInfo = ({hoistDataForm}) => {
+
+  const {register, handleSubmit, formState: { errors }} = useForm();
+  const onSubmit = data => console.log(data);
+
   return (
-    <form className='FormInfo-container'>
+    <form className='FormInfo-container' onSubmit={handleSubmit(onSubmit)}>
 
         <div className='FormInfo-header'>
           <h1>Personal Info</h1>
@@ -12,17 +17,27 @@ const FormInfo = () => {
 
         <div className="FormInfo-input-container">
           <label>Name</label>
-          <input placeholder="e.g Stephen King"></input>
+          <span className="error-field">{errors.name?.type == 'required' ? "Name Required" : undefined}</span>
+          <input 
+          className={errors.name?.type == 'required' ? "invalid-input" : undefined}
+          placeholder="e.g Stephen King" 
+          {...register("name", { required:true })}></input>
         </div>
 
         <div className="FormInfo-input-container">
           <label>Email Address</label>
-          <input placeholder="e.g Stephen King"></input>
+          <span className="error-field">{errors.name?.type == 'required' ? "Email Required" : undefined}</span>
+          <input  className={errors.email?.type == 'required' ? "invalid-input" : undefined} 
+          placeholder="e.g stephenking@email.com" 
+          {...register("email", { required:true })}></input>
         </div>
 
         <div className="FormInfo-input-container">
           <label>Phone Number</label>
-          <input placeholder="e.g Stephen King"></input>
+          <span className="error-field">{errors.name?.type == 'required' ? "Phone Required" : undefined}</span>
+          <input  className={errors.phone?.type == 'required' ? "invalid-input" : undefined} 
+          placeholder="e.g +1 234 567 890" 
+          {...register("phone", { required:true })}></input>
         </div>
 
         <button className="FormInfo-button">Next Step</button>

@@ -13,7 +13,8 @@ const Form = () => {
   return (
     <div className="Form-container">
         <Tracker />
-        <FormPlans payTime={payTime} setPayTime={setPayTime} planType={planType} setPlanType={setPlanType}/>
+        {/* <FormPlans payTime={payTime} setPayTime={setPayTime} planType={planType} setPlanType={setPlanType}/> */}
+        <FormInfo/>
     </div>
   )
 }
