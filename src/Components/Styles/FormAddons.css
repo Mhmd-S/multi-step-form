@@ -1,0 +1,82 @@
+.FormAddon-container{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 5rem 1rem;
+    display: grid;
+    grid-auto-rows: 25% 75%;
+    flex-direction: column;
+}
+
+.FormAddon-header {
+    width: 100%;
+    padding-bottom: 1.7rem;
+}
+
+.FormAddon-header h1 {
+    font-size: 1.75rem;
+    padding-bottom: 0.5rem;
+    color: #183a5e;
+    
+}
+
+.FormAddon-header h5 {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #a4a5a8;
+}
+
+.FormAddon-addons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.FormAddon-addons-addon {
+    width: 100%;
+    height: 28%;
+    display: grid;
+    grid-template-areas: "i t p"
+                         "i st p";
+    grid-template-columns: 10% 70% 20%;
+    padding: 1rem 1.2rem;
+    border: 1px solid #c6c4c7;
+    border-radius: 7.5px;
+}   
+
+.FormAddon-addons-addon:hover {
+    border:1px solid #674d9f;
+    cursor: pointer;
+}
+
+.FormAddon-addons-addon-active {
+    background-color: #f8f9fe;
+    border:1px solid #674d9f;
+}
+
+.FormAddon-addons-addon input {
+    width: 50%;
+    grid-area: i;
+}
+
+.FormAddon-addons-addon h6 {
+    padding-bottom: 0.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2b496d;
+    grid-area: t;
+}
+
+.FormAddon-addons-addon p {
+    font-size: 0.75rem;
+    color: #a4a5a8;
+    grid-area: st;
+}
+
+.FormAddon-addons-addon span {
+    font-size: 0.85rem;
+    color: #8765d3;
+    align-self: center;
+    grid-area: p;
+    
+}

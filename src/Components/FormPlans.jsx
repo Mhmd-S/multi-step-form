@@ -1,7 +1,7 @@
 import React from 'react'
 import './Styles/FormPlans.css'
 
-const FormPlans = ({payTime, setPayTime, planType, setPlanType, setCurrentTab}) => {
+const FormPlans = ({payTime, setPayTime, planType, setPlanType}) => {
   return (
     <div className="FormPlans-container">
         <div className='FormPlans-header'>
