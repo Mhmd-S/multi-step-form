@@ -25,7 +25,6 @@
 
 .FormPlans-plans{
     width: 100%;
-    height: 35%;
     display: flex;
     justify-content: space-between;
 }
@@ -35,7 +34,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 1rem 0 0 1rem;
+    padding: 1rem 0 1rem 1rem;
     border: 1px solid #c6c4c7;
     border-radius: 7.5px;
 }
@@ -71,9 +70,10 @@
 
 .FormPlans-plans-planContainer h5 {
     margin-top: 2.45rem;
+    letter-spacing: 1px;
     font-size: 0.8rem;
     font-weight: 800;
-    color:#042859
+    color:#04494b
 }
 
 .FormPlans-plans-planContainer h6 {
@@ -146,38 +146,3 @@
     color:#183a5e !important;
 }
 
-.FormPlans-footer{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 3.2rem;
-}
-
-.FormPlans-button{
-    padding:1rem 1.5rem;
-    border-radius: 7.5px;
-    cursor: pointer;
-}
-
-.back {
-    color: #9797a1;
-    border: 1px solid transparent;
-    background-color: transparent;
-    font-weight: 600;
-}
-
-.back:hover{
-    color:#042859;
-}
-
-.next{
-    border:1px solid #022959;
-    background-color: #022959;
-    color: #ddeef8;
-}
-
-.next:hover{
-    background-color: #184a88;
-    border: 1px solid #abc2d0;
-}

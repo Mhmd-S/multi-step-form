@@ -1,8 +1,7 @@
 import React from 'react'
-import {useForm} from 'react-hook-form'
 import './Styles/FormPlans.css'
 
-const FormPlans = ({payTime, setPayTime, planType, setPlanType}) => {
+const FormPlans = ({payTime, setPayTime, planType, setPlanType, setCurrentTab}) => {
   return (
     <div className="FormPlans-container">
         <div className='FormPlans-header'>
@@ -37,11 +36,6 @@ const FormPlans = ({payTime, setPayTime, planType, setPlanType}) => {
             <span className={payTime ? undefined : "active-span"}>Monthly</span>
             <div  onClick={()=>setPayTime(!payTime)} className={payTime ? "active-slider slider":"slider"}></div>
             <span className={payTime ? "active-span" : undefined}>Yearly</span>            
-        </div>
-
-        <div className="FormPlans-footer">
-            <button className="FormPlans-button back">Go Back</button>
-            <button className="FormPlans-button next">Next Step</button>
         </div>
         
     </div>
