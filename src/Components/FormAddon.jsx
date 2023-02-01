@@ -13,22 +13,22 @@ export const FormAddon = ({payTime, addOns, onChangeAddon}) => {
 
         <div className="FormAddon-addons">
 
-            <label className={addOns.includes("0") ? "FormAddon-addons-addon FormAddon-addons-addon-active" : "FormAddon-addons-addon"}>
-                <input type="checkbox" onClick={ e=>onChangeAddon(e)} value="0"></input>                
+            <label className={addOns.includes("Online Services") ? "FormAddon-addons-addon FormAddon-addons-addon-active" : "FormAddon-addons-addon"}>
+                <input type="checkbox" onClick={ e=>onChangeAddon(e)} value="Online Services"></input>                
                 <h6>Online Services</h6>
                 <p>Access to multiplayer games</p>
                 <span>{payTime ? "+$1/mo" : "+$10/yr"}</span>
             </label>
             
-            <label className={addOns.includes("1") ? "FormAddon-addons-addon FormAddon-addons-addon-active" : "FormAddon-addons-addon"}>
-                <input type="checkbox" onClick={ e=>onChangeAddon(e)} value="1"></input>        
+            <label className={addOns.includes("Large Storage") ? "FormAddon-addons-addon FormAddon-addons-addon-active" : "FormAddon-addons-addon"}>
+                <input type="checkbox" onClick={ e=>onChangeAddon(e)} value="Large Storage"></input>        
                 <h6>Large Storage</h6>
                 <p>Access to multiplayer games</p>
                 <span>{payTime ? "+$2/mo" : "+$20/yr"}</span>
             </label>
             
-            <label className={addOns.includes("2") ? "FormAddon-addons-addon FormAddon-addons-addon-active" : "FormAddon-addons-addon"}>
-                <input type="checkbox" onClick={ e=>onChangeAddon(e)} value="2"></input>        
+            <label className={addOns.includes("Customizable Profile") ? "FormAddon-addons-addon FormAddon-addons-addon-active" : "FormAddon-addons-addon"}>
+                <input type="checkbox" onClick={ e=>onChangeAddon(e)} value="Customizable Profile"></input>        
                 <h6>Customizable Profile</h6>
                 <p>Cutom theme for your profile</p>
                 <span>{payTime ? "+$3/mo" : "+$30/yr"}</span>

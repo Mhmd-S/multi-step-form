@@ -5,6 +5,7 @@ import Tracker from "./Tracker.jsx"
 import FormInfo from "./FormInfo.jsx"
 import FormPlans from "./FormPlans.jsx"
 import { FormAddon } from './FormAddon'
+import Summary from './Summary.jsx'
 
 const Form = () => {
 
@@ -45,7 +46,6 @@ const Form = () => {
     let addOnValue = e.target.value;
     if (addOns.includes(addOnValue)){
       let newAddons = addOns.filter(x => x != addOnValue)
-      console.log(newAddons)
       setAddOns(newAddons)
     } else {
       setAddOns([...addOns, addOnValue])
@@ -77,7 +77,6 @@ const Form = () => {
 
     if(currentTab < 3 && errors.length === 0){
         setCurrentTab(currentTab+1)
-        console.log(currentTab)
       }
 
   }
@@ -90,7 +89,9 @@ const Form = () => {
       case 1:
         return <FormPlans  payTime={payTime} setPayTime={setPayTime} planType={planType} setPlanType={setPlanType} setCurrentTab={setCurrentTab} errors={formErrors}/>
       case 2:
-        return <FormAddon planType={planType} addOns={addOns} setAddOns={setAddOns}/>
+        return <FormAddon planType={planType} addOns={addOns} setAddOns={setAddOns} onChangeAddon={onChangeAddon}/>
+      case 3:
+        return <Summary addOns={addOns} planType={planType} payTime={payTime}/>
       default:
         return <FormInfo setCurrentTab={setCurrentTab} name={name} onChangeName={onChangeName} errors={formErrors}/>
     }
@@ -100,7 +101,9 @@ const Form = () => {
     <div className="Form-container">
         <div className="App-tracker"><Tracker/></div>
         <div className="App-main">
-        <FormAddon planType={planType} addOns={addOns} setAddOns={setAddOns} onChangeAddon={onChangeAddon}/></div>
+          {getCurrentTab()}
+          {/* <Summary addOns={addOns} planType={planType} payTime={payTime}/> */}
+        </div>
         <div className="App-footer">
             {currentTab == 0 ? "" : <button onClick={()=>setCurrentTab(currentTab-1)} className="App-button back">Go Back</button>}
             <button onClick={checkFields} className="App-button next">Next Step</button>
