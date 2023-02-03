@@ -1,0 +1,30 @@
+.Confirmation-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Confirmation-img {
+    width: 15%;
+    padding: .2rem;
+    border-radius: 100%;
+    border: 14px solid #eb5f72;
+}
+
+.Confirmation-title{
+    font-size: 1.5rem;
+    padding: 1.3rem 0;
+    color:#183a5e;
+}
+
+.Confirmation-subTitle{
+    width: 80%;
+    font-size: 0.9rem;
+    color:#a4a5a8;
+    font-weight: 500;
+    text-align: center;
+}

@@ -6,6 +6,7 @@ import FormInfo from "./FormInfo.jsx"
 import FormPlans from "./FormPlans.jsx"
 import { FormAddon } from './FormAddon'
 import Summary from './Summary.jsx'
+import Confirmation from './Confirmation'
 
 const Form = () => {
 
@@ -75,7 +76,7 @@ const Form = () => {
     
     setStepOneErros(errors);
 
-    if(currentTab < 3 && errors.length === 0){
+    if(currentTab < 4 && errors.length === 0){
         setCurrentTab(currentTab+1)
       }
 
@@ -91,7 +92,9 @@ const Form = () => {
       case 2:
         return <FormAddon planType={planType} addOns={addOns} setAddOns={setAddOns} onChangeAddon={onChangeAddon}/>
       case 3:
-        return <Summary addOns={addOns} planType={planType} payTime={payTime}/>
+        return <Summary addOns={addOns} planType={planType} payTime={payTime} setCurrentTab={setCurrentTab}/>
+        case 4:
+          return <Confirmation />
       default:
         return <FormInfo setCurrentTab={setCurrentTab} name={name} onChangeName={onChangeName} errors={formErrors}/>
     }
@@ -99,15 +102,18 @@ const Form = () => {
 
   return (
     <div className="Form-container">
-        <div className="App-tracker"><Tracker/></div>
+        <div className="App-tracker"><Tracker currentTab={currentTab}/></div>
         <div className="App-main">
           {getCurrentTab()}
-          {/* <Summary addOns={addOns} planType={planType} payTime={payTime}/> */}
         </div>
-        <div className="App-footer">
-            {currentTab == 0 ? "" : <button onClick={()=>setCurrentTab(currentTab-1)} className="App-button back">Go Back</button>}
-            <button onClick={checkFields} className="App-button next">{currentTab == 3 ? "Confirm" : "Next Step"} </button>
-        </div>
+        {currentTab >=4 ?
+          ""
+        :
+          <div className="App-footer">
+              {currentTab == 0 ? "" : <button onClick={()=>setCurrentTab(currentTab-1)} className="App-button back">Go Back</button>}
+              <button onClick={checkFields} className="App-button next">{currentTab == 3 ? "Confirm" : "Next Step"} </button>
+          </div>
+        }
     </div>
   )
 }

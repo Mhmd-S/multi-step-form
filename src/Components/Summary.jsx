@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Styles/Summary.css"
 
-const Summary = ({addOns, planType, payTime}) => {
+const Summary = ({addOns, planType, payTime, setCurrentTab}) => {
 
     let totalPrice = 0;
 
@@ -104,7 +104,7 @@ const Summary = ({addOns, planType, payTime}) => {
         <div className="Summary-desc-container">
             <div className="Summary-desc-cart">
                 <h4>{planName}({payTime ? "Yearly" : "Monthly"})</h4>
-                <button>Change</button>
+                <button onClick={()=>setCurrentTab(1)}>Change</button>
                 <span>${price}{payTime ? "/yr" : "/mo"}</span>
             </div>
             <div className="Summary-desc-extra"> {/* Addons */}
