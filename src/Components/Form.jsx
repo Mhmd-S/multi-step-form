@@ -106,7 +106,7 @@ const Form = () => {
         </div>
         <div className="App-footer">
             {currentTab == 0 ? "" : <button onClick={()=>setCurrentTab(currentTab-1)} className="App-button back">Go Back</button>}
-            <button onClick={checkFields} className="App-button next">Next Step</button>
+            <button onClick={checkFields} className="App-button next">{currentTab == 3 ? "Confirm" : "Next Step"} </button>
         </div>
     </div>
   )

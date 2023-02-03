@@ -14,24 +14,24 @@ export const FormAddon = ({payTime, addOns, onChangeAddon}) => {
         <div className="FormAddon-addons">
 
             <label className={addOns.includes("Online Services") ? "FormAddon-addons-addon FormAddon-addons-addon-active" : "FormAddon-addons-addon"}>
-                <input type="checkbox" onClick={ e=>onChangeAddon(e)} value="Online Services"></input>                
+                <input type="checkbox" onClick={ e=>onChangeAddon(e)} defaultChecked={addOns.includes("Online Services")? true : false} value="Online Services"></input>                
                 <h6>Online Services</h6>
                 <p>Access to multiplayer games</p>
                 <span>{payTime ? "+$1/mo" : "+$10/yr"}</span>
             </label>
             
             <label className={addOns.includes("Large Storage") ? "FormAddon-addons-addon FormAddon-addons-addon-active" : "FormAddon-addons-addon"}>
-                <input type="checkbox" onClick={ e=>onChangeAddon(e)} value="Large Storage"></input>        
+                <input type="checkbox" onClick={ e=>onChangeAddon(e)} defaultChecked={addOns.includes("Large Storage")? true : false} value="Large Storage"></input>        
                 <h6>Large Storage</h6>
                 <p>Access to multiplayer games</p>
                 <span>{payTime ? "+$2/mo" : "+$20/yr"}</span>
             </label>
             
             <label className={addOns.includes("Customizable Profile") ? "FormAddon-addons-addon FormAddon-addons-addon-active" : "FormAddon-addons-addon"}>
-                <input type="checkbox" onClick={ e=>onChangeAddon(e)} value="Customizable Profile"></input>        
+                <input type="checkbox" onClick={ e=>onChangeAddon(e)} defaultChecked={addOns.includes("Customizable Profile")? true : false} value="Customizable Profile"></input>        
                 <h6>Customizable Profile</h6>
                 <p>Cutom theme for your profile</p>
-                <span>{payTime ? "+$3/mo" : "+$30/yr"}</span>
+                <span>{payTime ? "+$2/mo" : "+$20/yr"}</span>
             </label>
         
         </div>
