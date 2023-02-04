@@ -40,7 +40,7 @@
                          "i st p";
     grid-template-columns: 10% 70% 20%;
     padding: 1rem 1.2rem;
-    border: 1px solid #c6c4c7;
+    border: 1px solid #674d9f;
     border-radius: 7.5px;
 }   
 
@@ -51,7 +51,7 @@
 
 .FormAddon-addons-addon-active {
     background-color: #f8f9fe;
-    border:1px solid #674d9f;
+    border:1px solid #5e40a0;
 }
 
 .FormAddon-addons-addon input {
@@ -79,4 +79,33 @@
     align-self: center;
     grid-area: p;
     
+}
+
+
+@media screen and (max-width: 480px) {
+    .FormAddon-container{
+        width: 85%;
+        height: 100%;
+        padding: 2rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .FormAddon-addons-addon {
+        width: 100%;
+        height: 28%;
+        display: grid;
+        grid-template-areas: "i t p"
+                             "i st p";
+        grid-template-columns: 10% 70% 20%;
+        padding: 0.5rem 1rem;
+        border: 1px solid #c6c4c7;
+        border-radius: 7.5px;
+    }
+    
+    .FormAddon-addons-addon {
+        margin-bottom: 0.9rem;
+    }
 }
