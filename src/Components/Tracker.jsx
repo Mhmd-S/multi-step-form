@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Styles/Tracker.css"
 
-const Tracker = (currentTab) => {
+const Tracker = ({currentTab}) => {
   return (
     <ul className="Tracker-container">
         <li className="Tracker-subContainer">
