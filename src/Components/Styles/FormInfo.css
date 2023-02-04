@@ -83,7 +83,7 @@
 
 @media screen and (max-width:480px) {
     .FormInfo-container{
-        width: 85%;
+        width: 90%;
         height: 100%;
         padding: 2rem 2.5rem;
         display: flex;

@@ -112,3 +112,15 @@
     color:rgb(129, 34, 177);
     font-weight: 700;
 }
+
+@media screen and (max-width: 480px){
+    .Summary-container {
+        width: 90%;
+        height: 100%;
+        padding: 2rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+    }
+}
